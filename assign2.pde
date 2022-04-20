@@ -11,7 +11,7 @@ PImage groundhogRight;
 int x =0;
 int cabbage_x=int (random(0,640)/80)*80;
 int cabbage_y=int (random(160,480)/80)*80;
-int groundhogIdle_x = 280;
+int groundhogIdle_x = 320;
 int groundhogIdle_y = 80;
 
 
@@ -49,7 +49,7 @@ void draw() {
   image(lifeImg,10,10);
   image(lifeImg,80,10);
   
-  image(groundhogIdle,280,80);
+
   
   image(soldierImg, x, 160);
   x=x+2;
@@ -74,20 +74,20 @@ void draw() {
 
 void keyPressed(){
 
-  if(keyCode==LEFT){
-  groundhogIdle = groundhogLeft;
-  groundhogIdle_x=groundhogIdle_x-40;
-  }  
-  else if(keyCode==RIGHT){
-  groundhogIdle = groundhogRight;
-  groundhogIdle_x=groundhogIdle_x+40;  }
-  else if(keyCode==DOWN){
-  groundhogIdle = groundhogDown;
-  groundhogIdle_y=groundhogIdle_y+40;
-  }
+  
 }
 
 void keyReleased(){
 
-
+if(keyCode==LEFT){
+  groundhogIdle = groundhogLeft;
+  groundhogIdle_x=groundhogIdle_x-80;
+  }  
+  else if(keyCode==RIGHT){
+  groundhogIdle = groundhogRight;
+  groundhogIdle_x=groundhogIdle_x+80;  }
+  else if(keyCode==DOWN){
+  groundhogIdle = groundhogDown;
+  groundhogIdle_y=groundhogIdle_y+80;
+  }
 }
