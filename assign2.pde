@@ -210,34 +210,26 @@ void keyPressed() {
 
       case DOWN:
         move_y = groundhog_y;
-        if (move_y < height-area) {
-          downPressed = true;
-          groundhog_y += area;
-        }
+        downPressed = true;
+        groundhog_y += area;
         break;
+        
       case UP:
         move_y = groundhog_y;
-        if (move_y < height+area) {
-          downPressed = true;
-          groundhog_y -= area;
-        }
+        downPressed = true;
+        groundhog_y -= area;
         break;
 
       case LEFT:
         move_x = groundhog_x;
-        if (move_x > 0) {
-          leftPressed = true;
-          groundhog_x -= area;
-        }
+        leftPressed = true;
+        groundhog_x -= area;
         break;
 
       case RIGHT:
         move_x = groundhog_x;
-        if (move_x < width-area) {
-          rightPressed = true;
-          groundhog_x+= area;
-        }
-
+        rightPressed = true;
+        groundhog_x+= area;
         break;
       }
     }
