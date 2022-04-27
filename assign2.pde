@@ -123,7 +123,7 @@ void draw() {
         downPressed = false;
       }
     } 
-    else if (upPressed) {
+    /*else if (upPressed) {
       if (move_y > groundhog_y) {
         image( groundhogDown, groundhog_x, move_y);
         move_y -= floor(80/15);
@@ -131,7 +131,7 @@ void draw() {
       else {
         downPressed = false;
       }
-    }
+    }*/
     else if (leftPressed) {
       if (move_x > groundhog_x) {
         image( groundhogLeft, move_x, groundhog_y);
@@ -224,11 +224,11 @@ void keyPressed() {
         groundhog_y += area;
         break;
         
-      case UP:
+      /*case UP:
         move_y = groundhog_y;
         downPressed = true;
         groundhog_y -= area;
-        break;
+        break;*/
 
       case LEFT:
         move_x = groundhog_x;
@@ -256,8 +256,8 @@ void keyReleased() {
       break;
     case RIGHT:
       break;
-    case UP:
-      break;
+    /*case UP:
+      break;*/
     }
   }
 }
