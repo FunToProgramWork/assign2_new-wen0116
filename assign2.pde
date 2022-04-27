@@ -40,6 +40,7 @@ final int game_over = 2;
 boolean downPressed = false;
 boolean leftPressed = false;
 boolean rightPressed = false;
+boolean upPressed = false;
 
 
 
@@ -122,6 +123,15 @@ void draw() {
         downPressed = false;
       }
     } 
+    else if (upPressed) {
+      if (move_y > groundhog_y) {
+        image( groundhogDown, groundhog_x, move_y);
+        move_y -= floor(80/15);
+      } 
+      else {
+        downPressed = false;
+      }
+    }
     else if (leftPressed) {
       if (move_x > groundhog_x) {
         image( groundhogLeft, move_x, groundhog_y);
